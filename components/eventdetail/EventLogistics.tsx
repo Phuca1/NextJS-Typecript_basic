@@ -2,7 +2,7 @@ import { AddressIcon, DateIcon } from "components";
 import React from "react";
 import classes from "./EventLogistics.module.scss";
 import { LogisticsItem } from "./LogisticsItem";
-
+import Image from 'next/image';
 interface IEventLogistics {
     date?: string;
     address?: string;
@@ -25,7 +25,7 @@ export const EventLogistics: React.FunctionComponent<IEventLogistics> = (
     return (
         <section className={classes.logistics}>
             <div className={classes.image}>
-                <img src={`/${image}`} alt={imageAlt} />
+                <Image src={`/${image}`} alt={imageAlt} width={240} height={240}/>
             </div>
             <ul className={classes.list}>
                 <LogisticsItem icon={DateIcon}>
